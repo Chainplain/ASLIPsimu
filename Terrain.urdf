@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Terrain">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0500000000000001 -0.25 0.025"
+        rpy="0 0 0" />
+      <mass
+        value="12.5" />
+      <inertia
+        ixx="0.263020833333333"
+        ixy="-4.63430521238871E-18"
+        ixz="2.96774621824139E-18"
+        iyy="0.263020833333333"
+        iyz="1.39789376589324E-17"
+        izz="0.520833333333333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="T1">
+    <inertial>
+      <origin
+        xyz="1.74570493054874 -0.68458556855293 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="35.125" />
+      <inertia
+        ixx="0.747863975385528"
+        ixy="-0.0239873776690392"
+        ixz="-3.12219358710062E-18"
+        iyy="3.35138697360617"
+        iyz="5.23512983382698E-18"
+        izz="2.63570928232503" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="fixed">
+    <origin
+      xyz="-0.924530553324541 -1.54065008243366 0.720421867485314"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="T1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T2">
+    <inertial>
+      <origin
+        xyz="2.7191617060519 -0.679177474506086 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="78.7325781546689" />
+      <inertia
+        ixx="1.69051544497194"
+        ixy="-0.022895468893244"
+        ixz="7.45388993583784E-17"
+        iyy="22.9020951522932"
+        iyz="-2.37169225231204E-17"
+        izz="21.3120865468874" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T1" />
+    <child
+      link="T2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T3">
+    <inertial>
+      <origin
+        xyz="3.76525903014573 -0.70101789397538 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="18.875" />
+      <inertia
+        ixx="0.39579537803532"
+        ixy="-0.0121613203642385"
+        ixz="-3.72694496791892E-17"
+        iyy="1.85749206677704"
+        iyz="3.81164826264435E-18"
+        izz="1.46682911147903" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T2" />
+    <child
+      link="T3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T4">
+    <inertial>
+      <origin
+        xyz="4.19873437498059 -0.70048556175283 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="19.625" />
+      <inertia
+        ixx="0.411577003715499"
+        ixy="0.00842287022292986"
+        ixz="1.46552885217935E-17"
+        iyy="1.98605526804671"
+        iyz="-7.21542588317137E-19"
+        izz="1.57992393842888" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T3" />
+    <child
+      link="T4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T5">
+    <inertial>
+      <origin
+        xyz="4.71641089520488 -0.677003064066511 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="39" />
+      <inertia
+        ixx="0.842577492877493"
+        ixy="0.00825071225071215"
+        ixz="1.72861325540003E-16"
+        iyy="3.10117877492878"
+        iyz="-1.1278424682637E-17"
+        izz="2.31875626780627" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T4" />
+    <child
+      link="T5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T6">
+    <inertial>
+      <origin
+        xyz="4.97453055332454 -0.710421867485314 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="0.104333333333333"
+        ixy="-3.97740573764098E-19"
+        ixz="2.29621274840129E-19"
+        iyy="0.208333333333333"
+        iyz="-2.25875452601147E-19"
+        izz="0.104333333333333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T5" />
+    <child
+      link="T6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T7">
+    <inertial>
+      <origin
+        xyz="5.21641089520488 -0.677003064066511 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="39" />
+      <inertia
+        ixx="0.842577492877493"
+        ixy="0.00825071225071215"
+        ixz="1.72861325540003E-16"
+        iyy="3.10117877492878"
+        iyz="-1.1278424682637E-17"
+        izz="2.31875626780627" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J7"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T6" />
+    <child
+      link="T7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T8">
+    <inertial>
+      <origin
+        xyz="5.76525903014573 -0.70101789397538 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="18.875" />
+      <inertia
+        ixx="0.39579537803532"
+        ixy="-0.0121613203642385"
+        ixz="-4.50733717733626E-17"
+        iyy="1.85749206677704"
+        iyz="4.41837067042597E-18"
+        izz="1.46682911147903" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J8"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T7" />
+    <child
+      link="T8" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T9">
+    <inertial>
+      <origin
+        xyz="5.97453055332454 -0.695421867485314 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="12.5" />
+      <inertia
+        ixx="0.263020833333333"
+        ixy="1.88354404575588E-18"
+        ixz="-1.14810637420064E-18"
+        iyy="0.520833333333333"
+        iyz="1.80700362080917E-18"
+        izz="0.263020833333333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J9"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T8" />
+    <child
+      link="T9" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T10">
+    <inertial>
+      <origin
+        xyz="6.19873437498059 -0.70048556175283 -1.29065008243366"
+        rpy="0 0 0" />
+      <mass
+        value="19.625" />
+      <inertia
+        ixx="0.411577003715499"
+        ixy="0.00842287022292986"
+        ixz="1.46552885217935E-17"
+        iyy="1.98605526804671"
+        iyz="-7.21542588317136E-19"
+        izz="1.57992393842888" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J10"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T9" />
+    <child
+      link="T10" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T11">
+    <inertial>
+      <origin
+        xyz="6.4745 -0.71042 -1.2907"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="0.10433"
+        ixy="-3.9774E-19"
+        ixz="2.2962E-19"
+        iyy="0.20833"
+        iyz="-2.2588E-19"
+        izz="0.10433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Terrain/meshes/T11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J11"
+    type="fixed">
+    <origin
+      xyz="0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T10" />
+    <child
+      link="T11" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="SLIPone">
+  <link
+    name="Torso">
+    <inertial>
+      <origin
+        xyz="0.06809 -0.03213 -0.021321"
+        rpy="0 0 0" />
+      <mass
+        value="1.6644" />
+      <inertia
+        ixx="0.0020012"
+        ixy="1.6636E-21"
+        ixz="-1.2397E-20"
+        iyy="0.001262"
+        iyz="-6.0222E-21"
+        izz="0.001262" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://SLIPone/meshes/Torso.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.43529 1 0.98824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://SLIPone/meshes/Torso.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Thigh">
+    <inertial>
+      <origin
+        xyz="2.8626E-11 -0.019078 0.068073"
+        rpy="0 0 0" />
+      <mass
+        value="0.13442" />
+      <inertia
+        ixx="0.00014466"
+        ixy="-1.4794E-13"
+        ixz="-2.2785E-10"
+        iyy="3.4061E-05"
+        iyz="-1.6579E-08"
+        izz="0.00017214" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://SLIPone/meshes/Thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.38824 0.4 0.85882 0.6" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://SLIPone/meshes/Thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rotate"
+    type="continuous">
+    <origin
+      xyz="0 0.021321 -0.03213"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="Torso" />
+    <child
+      link="Thigh" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Feet">
+    <inertial>
+      <origin
+        xyz="8.9937E-10 1.6594E-09 0.12684"
+        rpy="0 0 0" />
+      <mass
+        value="0.036401" />
+      <inertia
+        ixx="9.0381E-05"
+        ixy="6.4755E-13"
+        ixz="-3.5682E-13"
+        iyy="0.00019203"
+        iyz="-4.9625E-13"
+        izz="0.00010298" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://SLIPone/meshes/Feet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.5451 0.48235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://SLIPone/meshes/Feet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Trans"
+    type="prismatic">
+    <origin
+      xyz="0 -0.162 0.068054"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Thigh" />
+    <child
+      link="Feet" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.10"
+      upper="0.02"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
